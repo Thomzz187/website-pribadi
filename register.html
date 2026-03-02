@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Register</title>
+<title>Register - Thomzz</title>
+<style>
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(135deg,#16213e,#1a1a2e);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+.box{
+background:#0f3460;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:300px;
+}
+input{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:#ff4ecd;
+color:white;
+cursor:pointer;
+}
+</style>
 </head>
-<body style="background:#16213e;color:white;text-align:center;padding-top:100px;font-family:sans-serif">
+<body>
 
+<div class="box">
 <h2>Register</h2>
-<input type="email" id="email" placeholder="Masukkan Gmail"><br><br>
-<input type="text" id="username" placeholder="Buat Username"><br><br>
+<input type="email" id="email" placeholder="Masukkan Gmail">
+<input type="text" id="username" placeholder="Buat Username">
 <button onclick="register()">Register</button>
+</div>
 
 <script>
 function register(){
 let email=document.getElementById("email").value;
 let user=document.getElementById("username").value;
 
-if(email.includes("@gmail.com") && user!=""){
+if(email.includes("@gmail.com") && user.trim()!=""){
 localStorage.setItem("username",user);
 window.location.href="index.html";
 }else{
-alert("Gunakan Gmail valid!");
+alert("Gunakan Gmail valid & isi username!");
 }
 }
 </script>
