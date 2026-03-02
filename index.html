@@ -1,6 +1,65 @@
-<h1>Halo, <span id="nama"></span> 👋</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home - Thomzz</title>
+<style>
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+}
+h1 span{color:#00e0ff}
+.btn{
+display:block;
+margin:10px;
+padding:12px 25px;
+width:220px;
+border:none;
+border-radius:30px;
+background:#00e0ff;
+color:black;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+}
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00e0ff;
+}
+.logout{
+background:#ff4d4d;
+color:white;
+}
+</style>
+</head>
+<body>
+
+<h1>Halo, <span id="username"></span> 👋</h1>
+
+<a href="profile.html" class="btn">Profil</a>
+<a href="whatsapp.html" class="btn">Chat WhatsApp</a>
+<a href="chat.html" class="btn">Chat Bertanya</a>
+<button onclick="logout()" class="btn logout">Logout</button>
 
 <script>
 let user = localStorage.getItem("username");
-document.getElementById("nama").innerText = user;
+if(!user){
+window.location.href="login.html";
+}
+document.getElementById("username").innerText = user;
+
+function logout(){
+localStorage.removeItem("username");
+window.location.href="login.html";
+}
 </script>
+
+</body>
+</html>
