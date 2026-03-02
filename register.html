@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+</head>
+<body style="background:#16213e;color:white;text-align:center;padding-top:100px;font-family:sans-serif">
+
+<h2>Register</h2>
+<input type="email" id="email" placeholder="Masukkan Gmail"><br><br>
+<input type="text" id="username" placeholder="Buat Username"><br><br>
+<button onclick="register()">Register</button>
+
+<script>
+function register(){
+let email=document.getElementById("email").value;
+let user=document.getElementById("username").value;
+
+if(email.includes("@gmail.com") && user!=""){
+localStorage.setItem("username",user);
+window.location.href="index.html";
+}else{
+alert("Gunakan Gmail valid!");
+}
+}
+</script>
+
+</body>
+</html>
