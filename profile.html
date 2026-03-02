@@ -1,8 +1,23 @@
-<h2>Profil</h2>
-<p>Username: <span id="nama"></span></p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile - Thomzz</title>
+</head>
+<body style="background:#1a1a2e;color:white;text-align:center;padding-top:100px;font-family:sans-serif">
+
+<h1>Profil</h1>
+<p>Username: <span id="user"></span></p>
+<p>Saya bukan programmer ahli. Saya hanya share code yang saya pahami.</p>
+
+<a href="index.html">⬅ Kembali ke Home</a>
 
 <script>
 let user = localStorage.getItem("username");
-if(!user){ window.location.href="login.html"; }
-document.getElementById("nama").innerText = user;
+if(!user){
+window.location.href="login.html";
+}
+document.getElementById("user").innerText=user;
 </script>
+
+</body>
+</html>
