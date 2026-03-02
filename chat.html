@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Chat Bertanya</title>
+<style>
+body{
+background:#1e1e2f;
+font-family:sans-serif;
+color:white;
+text-align:center;
+}
+.chat-box{
+width:90%;
+max-width:500px;
+margin:30px auto;
+background:#2e2e4d;
+padding:20px;
+border-radius:10px;
+}
+#messages{
+height:200px;
+overflow-y:auto;
+background:#1a1a2e;
+padding:10px;
+margin-bottom:10px;
+border-radius:8px;
+}
+input{
+width:70%;
+padding:10px;
+border:none;
+border-radius:5px;
+}
+button{
+padding:10px 15px;
+border:none;
+border-radius:5px;
+background:#00e0ff;
+}
+</style>
+</head>
+<body>
+
+<h1>Chat Bertanya 💬</h1>
+
+<div class="chat-box">
+<div id="messages"></div>
+
+<input type="text" id="msg" placeholder="Tulis pesan...">
+<button onclick="sendMessage()">Kirim</button>
+</div>
+
+<script>
+function sendMessage(){
+let input=document.getElementById("msg");
+let message=input.value;
+if(message.trim() !== ""){
+let div=document.createElement("div");
+div.textContent=message;
+document.getElementById("messages").appendChild(div);
+input.value="";
+}
+}
+</script>
+
+</body>
+</html>
