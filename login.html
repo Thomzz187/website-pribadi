@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Thomzz</title>
+<style>
+body{background:#141e30;color:white;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh}
+.box{background:#1f2a40;padding:30px;border-radius:10px;text-align:center}
+input{padding:10px;margin:10px;border:none;border-radius:5px}
+button{padding:10px 20px;border:none;border-radius:20px;background:#00e0ff;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Login</h2>
+<input type="text" id="username" placeholder="Username"><br>
+<button onclick="login()">Login</button>
+<p><a href="register.html" style="color:#00e0ff">Register</a></p>
+</div>
+
+<script>
+function login(){
+let user=document.getElementById("username").value;
+if(user.trim()!=""){
+localStorage.setItem("username",user);
+window.location.href="index.html";
+}
+}
+</script>
+
+</body>
+</html>
