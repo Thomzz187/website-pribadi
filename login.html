@@ -3,19 +3,48 @@
 <head>
 <title>Login - Thomzz</title>
 <style>
-body{background:#141e30;color:white;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh}
-.box{background:#1f2a40;padding:30px;border-radius:10px;text-align:center}
-input{padding:10px;margin:10px;border:none;border-radius:5px}
-button{padding:10px 20px;border:none;border-radius:20px;background:#00e0ff;font-weight:bold}
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(135deg,#141e30,#243b55);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+.box{
+background:#1f2a40;
+padding:30px;
+border-radius:15px;
+text-align:center;
+width:300px;
+}
+input{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+button{
+padding:10px 20px;
+border:none;
+border-radius:25px;
+background:#00e0ff;
+font-weight:bold;
+cursor:pointer;
+}
+a{color:#00e0ff;text-decoration:none}
 </style>
 </head>
 <body>
 
 <div class="box">
 <h2>Login</h2>
-<input type="text" id="username" placeholder="Username"><br>
+<input type="text" id="username" placeholder="Masukkan Username">
 <button onclick="login()">Login</button>
-<p><a href="register.html" style="color:#00e0ff">Register</a></p>
+<p>Belum punya akun? <a href="register.html">Register</a></p>
 </div>
 
 <script>
